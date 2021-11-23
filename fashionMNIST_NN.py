@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+# %%
 # add modules:
 import torch 
 from torch import nn
@@ -8,6 +9,7 @@ from torchvision import datasets
 from torchvision.transforms import ToTensor, Lambda, Compose
 import matplotlib.pyplot as plt 
 
+# %%
 # Download training data from the FashionMNIST dataset:
 training_data = datasets.FashionMNIST(
     root="data",
@@ -16,6 +18,7 @@ training_data = datasets.FashionMNIST(
     transform=ToTensor(),
 )
 
+# %%
 # Download test data from the FashionMNIST dataset:
 test_data = datasets.FashionMNIST(
     root="data",
@@ -24,3 +27,4 @@ test_data = datasets.FashionMNIST(
     transform=ToTensor(),
 )
 
+# %%
