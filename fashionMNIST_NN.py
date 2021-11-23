@@ -28,3 +28,17 @@ test_data = datasets.FashionMNIST(
 )
 
 # %%
+# Set batch size of features and labels:
+batch_size = 64
+
+# Create data loaders:
+train_dataloader = DataLoader(training_data, batch_size=batch_size)
+
+test_dataloader = DataLoader(test_data, batch_size=batch_size)
+
+for X, y in test_dataloader:
+    print("Shape of X [N, C, H, W]: ", X.shape)
+    print("Shape of y: ", y.shape, y.dtype)
+    break
+
+# %%
