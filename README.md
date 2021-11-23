@@ -95,3 +95,9 @@ Test Error:
 
 Finished!
 ```
+
+## Predictions of Model:
+'''
+# Prediction classes:...
+Predicted: "Ankle boot", Actual: "Ankle boot"
+'''
