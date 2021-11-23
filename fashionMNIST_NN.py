@@ -1,6 +1,10 @@
-<<<<<<< HEAD
 #!/usr/bin/env python3
 
-=======
-#!/usr/bin/env python3
->>>>>>> 2209831 (new files added)
+# add modules:
+import torch 
+from torch import nn
+from torch.utils.data import DataLoader
+from torchvision import datasets
+from torchvision.transforms import ToTensor, Lambda, Compose
+import matplotlib.pyplot as plt 
+
