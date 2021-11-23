@@ -69,3 +69,29 @@ class NeuralNetwork(nn.Module):
 model = NeuralNetwork().to(device)
 print(model)
 # %%
+# Set loss function & optimizer parameters:
+# Use the cross-entropy distributions of the networks:
+loss_fn = nn.CrossEntropyLoss()
+
+# Use Stochastic Gradient Descent (SGD) to optimize the objective parameter:
+optimizer = torch.optim.SGD(model.parameters(), lr = 1e-3)
+
+def train(dataloader, model, loss_fn, optimizer):
+    size = len(dataloader.dataset)
+    model.train()
+    for batch, (X, y) in enumerate(dataloader):
+        X, y = X.to(device), y.to(device)
+
+        # Compute the prediction error:
+        pred = model(X)
+        loss = loss_fn(pred, y)
+
+        # Backpropogate the prediction error to adjust the model parameters:
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+
+        if batch % 100 == 0:
+            loss, current = loss.item(), batch * len(X)
+            print(f'loss: {loss:>7f}  [{current:>5d}/{size:>5d}]')
+
