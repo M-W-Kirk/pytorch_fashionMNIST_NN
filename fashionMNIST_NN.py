@@ -119,3 +119,6 @@ print('Finished!')
 
 
 # %%
+# Save the model:
+torch.save(model.state_dict(), 'FashionMNIST_Model.pth')
+print('Saved PyTorch Model State to FashionMNIST_Model.pth')

@@ -16,7 +16,7 @@ NeuralNetwork(
 
 ## Run on Apple M1 chip
 The following results of 5 training Epochs:
-> Accuracy: 65.6%, Avg loss: 1.065081* 
+> Accuracy: 65.6%, Avg loss: 1.065081 
 ```
 Epoch 1
 -------------------------------
